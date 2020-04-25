@@ -41,8 +41,6 @@ body {
 }
 #title:hover {
     opacity: 0.5;
-    font-size: 60px;
-    color: black;
 }
 
 #menu {
@@ -54,8 +52,6 @@ body {
 
 #menu:hover {
     opacity: 0.5;
-    font-size: 60px;
-    color: black;
 }
 
 .run-text {
