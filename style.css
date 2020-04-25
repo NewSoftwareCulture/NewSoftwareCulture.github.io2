@@ -1,0 +1,233 @@
+body, h1, h2, h3, h4, p, a, div {
+    margin: 0;
+    font-size: 100%;
+    font-weight: normal;
+}
+a { 
+    text-decoration: none;
+} 
+
+body { 
+    background-color: #F8F8F8;
+}
+
+.round-border {
+    -moz-border-radius: 15px; /* закругление для старых Mozilla Firefox */
+    -webkit-border-radius: 15px; /* закругление для старых Chrome и Safari */
+    -khtml-border-radius:15px; /* закругл. для браузера Konquerer системы Linux */
+    border-radius: 15px; /* закругление углов для всех, кто понимает */
+}
+
+#header {
+    box-sizing: border-box;
+    background-color: #181818;
+    height: 100vh;
+    width: 100%;
+    padding-top: 4vh;
+}
+
+#title {
+    display: block;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-left: 4vw;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    border: white 2px solid;
+}
+#title:hover {
+    opacity: 0.5;
+    font-size: 60px;
+    color: black;
+}
+
+#menu {
+    color: white;
+    height: 30px; 
+    font-size: 50px;
+    font-weight: 700;
+}
+
+#menu:hover {
+    opacity: 0.5;
+    font-size: 60px;
+    color: black;
+}
+
+.run-text {
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
+    margin: 5vh 1vw 5vh 1vw;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 7vh;
+    font-weight: 700;
+    overflow: hidden;
+    text-overflow: clip;
+    width: 97vw;
+}
+
+#header-img {
+    margin-left: 4vw;
+    height: 60vh;
+    width: 50vw;
+}
+
+#header-text {
+    height: 50vh;
+    width: 25vw;
+    margin: 10vh 0px 0px 10vw;
+    font-size: 2vh;
+    color: rgb(255, 255, 255, 0.4);
+}
+
+.menu {
+    color: white;
+    height: 30px; 
+    font-size: 50px;
+    font-weight: 700;
+
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.menu .menu-window {
+    box-sizing: border-box;
+    visibility: hidden;
+    width: 100vw;
+    height: 100vh;
+    background-color: #181818;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    margin-left: -96vw;
+    margin-top: -5vh;
+}
+
+.menu .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+}
+
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+#menu-text {
+    margin: 5vh auto 25vh auto;
+    width: 20vw;
+    text-transform: uppercase;
+    font-size: 10vh;
+    font-weight: 300;
+    border: white 2px solid;
+}
+
+.menu-content-text {
+    margin: auto 5vw 40vh 5vw;
+    color: white;
+    text-transform: uppercase;
+    font-size: 5vh;
+    font-weight: 300;
+}
+
+.menu-content-text:hover {
+    opacity: 0.5;
+    /* font-size: 60px; */
+    /* color: black; */
+}
+
+
+.content {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+
+.content-image {
+    height: 100vh;
+    width: 50%;
+
+}
+.content-block {
+    display: block;
+    height: 100vh;
+    width: 50%;
+}
+
+.content-title {
+    margin-top: 35vh;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 10vh;
+    font-weight: 700;
+    color: white;
+}
+
+.content-line {
+    margin-bottom: 3vh;
+    margin-top: 1vh;
+    text-align: center;
+    color: white;
+}
+
+.content-text {
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 1vh;
+    font-size: 2vh;
+    color: white;
+}
+
+.content-button {
+    display: block;
+    height: 4vh;
+    width: 7vw;
+    margin: 3vh auto;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 500;
+    color: white;
+    border: white 2px solid;
+}
+
+.line {
+    height: 4vh;
+    width: 100%;
+    background-color: #181818;
+}
+
+.footer {
+    display: flex;
+    height: 100px;
+    background-color: #181818;
+}
+
+.icon {
+    margin: 3vh 1vw 2vh 0px;
+    height: 4vh;
+    width: 3vw;
+}
+  
+.footer-author {
+    margin: auto 2vw auto 5vw;
+    color: white;
+    font-size: 24px;
+}
