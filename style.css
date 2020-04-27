@@ -15,6 +15,7 @@ body {
 
 #header {
     max-width: 1900px;
+    min-height: 100vh;
     margin: 0 auto 0 auto;
     box-sizing: border-box;
     background-color: #181818;
@@ -58,7 +59,7 @@ body {
     box-sizing: border-box;
     visibility: hidden;
     width: 99vw;
-    height: 100vh;
+    height: 120vh;
     background-color: #181818;
     color: #fff;
     text-align: center;
@@ -86,12 +87,14 @@ body {
 
 
 .menu-container {
+    max-width: 1900px;
+    margin: auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    margin-top: 15vw;
+    margin-top: 30vh;
 }
 #menu-text {
-    margin: 5vh auto 10vh auto;
+    margin: 5vh auto 5vh auto;
     width: 160px;
     text-transform: uppercase;
     font-size: 40px;
@@ -100,7 +103,7 @@ body {
 }
 .menu-content-text {
     max-width: 600px;
-    margin: auto 2vw 40vh 0;
+    margin: auto 2vw auto 0;
     font-weight: bold;
     text-transform: uppercase;
     font-size: 10vh;
@@ -116,7 +119,8 @@ body {
     }
     .menu-container {
         grid-template-columns: 100vw;
-        margin-bottom: 20vh;
+        margin-bottom: 5vh;
+        margin-top: 10vh;
         padding-left: 0;
     }
 }
