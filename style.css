@@ -1,5 +1,6 @@
 body, h1, h2, h3, h4, p, a, div {
     margin: 0;
+    padding: 0;
     font-size: 100%;
     font-weight: normal;
 }
@@ -11,30 +12,25 @@ body {
     background-color: #F8F8F8;
 }
 
-.round-border {
-    -moz-border-radius: 15px; /* закругление для старых Mozilla Firefox */
-    -webkit-border-radius: 15px; /* закругление для старых Chrome и Safari */
-    -khtml-border-radius:15px; /* закругл. для браузера Konquerer системы Linux */
-    border-radius: 15px; /* закругление углов для всех, кто понимает */
-}
-
 #header {
     box-sizing: border-box;
     background-color: #181818;
     height: 100vh;
     width: 100%;
-    padding-top: 4vh;
+    padding-top: 2vh;
 }
 
 #title {
+    position: fixed;
     display: block;
     box-sizing: border-box;
-    padding: 10px;
-    margin-left: 4vw;
+    width: 170px;
+    height: 27px;
+    margin: 1vh auto auto 4vw;
     text-align: center;
     text-transform: uppercase;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 700;
     color: white;
     border: white 2px solid;
@@ -43,51 +39,15 @@ body {
     opacity: 0.5;
 }
 
-#menu {
-    color: white;
-    height: 30px; 
-    font-size: 50px;
-    font-weight: 700;
-}
-
-#menu:hover {
-    opacity: 0.5;
-}
-
-.run-text {
-    color: transparent;
-    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
-    margin: 5vh 1vw 5vh 1vw;
-    text-transform: uppercase;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 7vh;
-    font-weight: 700;
-    overflow: hidden;
-    text-overflow: clip;
-    width: 97vw;
-}
-
-#header-img {
-    margin-left: 4vw;
-    height: 60vh;
-    width: 50vw;
-}
-
-#header-text {
-    height: 50vh;
-    width: 25vw;
-    margin: 10vh 0px 0px 10vw;
-    font-size: 2vh;
-    color: rgb(255, 255, 255, 0.4);
-}
-
 .menu {
-    color: white;
-    height: 30px; 
-    font-size: 50px;
-    font-weight: 700;
+    box-sizing: border-box;
+    left: 95%;
+    position: fixed;
 
-    position: relative;
+    color: white;
+    width: 50px;
+    font-size: 50px;
+    font-weight: 900;
     display: inline-block;
     cursor: pointer;
 }
@@ -95,17 +55,15 @@ body {
 .menu .menu-window {
     box-sizing: border-box;
     visibility: hidden;
-    width: 100vw;
+    width: 99vw;
     height: 100vh;
     background-color: #181818;
     color: #fff;
     text-align: center;
     border-radius: 6px;
     padding: 8px 0;
-    position: absolute;
-    z-index: 1;
-    left: 50%;
-    margin-left: -96vw;
+    position: fixed;
+    left: 0vw;
     margin-top: -5vh;
 }
 
@@ -125,47 +83,125 @@ body {
     to {opacity: 1;}
 }
 
+
+.menu-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 15vw;
+}
+
 #menu-text {
-    margin: 5vh auto 25vh auto;
-    width: 20vw;
+    margin: 5vh auto 10vh auto;
+    width: 160px;
     text-transform: uppercase;
-    font-size: 10vh;
+    font-size: 40px;
     font-weight: 300;
     border: white 2px solid;
 }
 
 .menu-content-text {
-    margin: auto 5vw 40vh 5vw;
-    color: white;
+    max-width: 600px;
+    margin: auto 2vw 40vh 0;
+    font-weight: bold;
     text-transform: uppercase;
-    font-size: 5vh;
+    font-size: 10vh;
     font-weight: 300;
 }
 
 .menu-content-text:hover {
     opacity: 0.5;
-    /* font-size: 60px; */
-    /* color: black; */
 }
 
+@media screen and (max-width: 1200px) {
+    .menu-content-text {
+        margin: 5vh auto 0 auto;
+    }
+    
+    .menu-container {
+        grid-template-columns: 100vw;
+        margin-bottom: 20vh;
+        padding-left: 0;
+    }
+}
+
+.run-text {
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
+    width: 80vw;
+    height: 50px;
+    margin: 7vh auto auto auto;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+    overflow: hidden;
+}
+
+#header-container {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+}
+
+#header-img {
+    max-width: 1500px;
+    width: 47vw;
+    margin: 5vw auto auto 5vw;
+}
+
+#header-text {
+    max-width: 1500px;
+
+    margin: 5vw 2vw 0 0;
+    font-size: 2.7vh;
+    color: rgb(255, 255, 255, 0.4);
+}
+
+@media screen and (max-width: 1150px) {
+    
+    #header-text {
+        font-size: 2.4vh;
+    }
+    #header-img {
+        margin-top: 8vw;
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+
+    #header-img {
+        width: 80vw;
+        height: 50vw;
+        margin: 0 auto 0 auto;
+    }
+    #header-text {
+        margin: 2vh 7vw 0 7vw;
+        font-size: 2vh;
+    }
+    #header-container {
+        margin-top: 5vh;
+        grid-template-columns: 100vw;
+    }
+}
 
 .content {
-    display: flex;
-    height: 100vh;
-    width: 100%;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
 }
+
 
 .content-image {
+    max-width: 1500px;
+    width: 60vw;
     height: 100vh;
-    width: 50%;
-
 }
+
 .content-block {
-    display: block;
+    max-width: 1500px;
+    width: calc(40vw-5px);
     height: 100vh;
-    width: 50%;
 }
-
 .content-title {
     margin-top: 35vh;
     text-align: center;
@@ -193,7 +229,7 @@ body {
 .content-button {
     display: block;
     height: 4vh;
-    width: 7vw;
+    width: 80px;
     margin: 3vh auto;
     padding: 10px;
     text-align: center;
@@ -204,6 +240,28 @@ body {
     border: white 2px solid;
 }
 
+@media screen and (max-width: 950px) {
+
+    .content-image {
+        width: calc(100vw - 15px);
+        height: 60vw;
+    }
+    .content-block {
+        width: calc(100vw - 15px);
+        height: calc(70px + 25vh);
+    }
+    .content {
+        grid-template-columns: 1fr;
+    }
+    .content .content-title {
+        margin-top: 0vh;
+        font-size: 10vw;
+    }
+    .content .content-text {
+        font-size: 18px;
+    }
+}
+
 .line {
     height: 4vh;
     width: 100%;
@@ -211,19 +269,24 @@ body {
 }
 
 .footer {
+    padding-top: 30px;
     display: flex;
-    height: 100px;
+    height: 80px;
     background-color: #181818;
 }
 
 .icon {
-    margin: 3vh 1vw 2vh 0px;
-    height: 4vh;
-    width: 3vw;
+    height: 40px;
+    width: 40px;
+    margin-left: 5px;
 }
   
 .footer-author {
-    margin: auto 2vw auto 5vw;
-    color: white;
+    padding-top: 10px;
+    height: 20px;
+    width: 120px;
+    margin-left: 6vw;
+    color: rgb(0, 0, 0);
+    font-weight: 900;
     font-size: 24px;
 }
