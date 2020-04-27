@@ -13,9 +13,10 @@ body {
 }
 
 #header {
+    max-width: 1900px;
+    margin: 0 auto 0 auto;
     box-sizing: border-box;
     background-color: #181818;
-    /* height: 100vh; */
     width: 100%;
     padding-top: 2vh;
 }
@@ -145,7 +146,7 @@ body {
 
 #header-img {
     max-width: 1500px;
-    width: 47vw;
+    width: 100vh;
     margin: 5vw auto auto 5vw;
 }
 
@@ -178,7 +179,6 @@ body {
     #header-text {
         margin: 2vh 7vw 0 7vw;
         font-size: min(4vw, 5vh);
-        /* padding-bottom: 2vw; */
     }
     #header-container {
         margin-top: 5vh auto 2vw auto;
@@ -187,6 +187,8 @@ body {
 }
 
 .content {
+    max-width: 1900px;
+    margin: 0 auto 0 auto;
     display: grid;
     grid-template-columns: 3fr 2fr;
 }
@@ -245,13 +247,11 @@ body {
 
     .content-image {
         width: 100vw;
-        /* width: calc(100vw - 15px); */
         height: 60vw;
     }
     .content-block {
         width: 100vw;
-        /* width: calc(100vw - 15px); */
-        height: calc(135px + 25vw)
+        height: calc(135px + 27vw)
     }
     .content {
         grid-template-columns: 1fr;
@@ -282,6 +282,7 @@ body {
     height: 40px;
     width: 40px;
     margin-left: 5px;
+    color: rgb(131, 130, 130);
 }
   
 .footer-author {
@@ -289,7 +290,7 @@ body {
     height: 20px;
     width: 120px;
     margin-left: 6vw;
-    color: rgb(0, 0, 0);
+    color: rgb(131, 130, 130);
     font-weight: 900;
     font-size: 24px;
 }
