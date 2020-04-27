@@ -243,11 +243,13 @@ body {
 @media screen and (max-width: 950px) {
 
     .content-image {
-        width: calc(100vw - 15px);
+        width: 100vw;
+        /* width: calc(100vw - 15px); */
         height: 60vw;
     }
     .content-block {
-        width: calc(100vw - 15px);
+        width: 100vw;
+        /* width: calc(100vw - 15px); */
         height: calc(70px + 25vh);
     }
     .content {
