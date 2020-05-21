@@ -1,0 +1,23 @@
+{
+  "name": "newsoftwareculture.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "build": "sass src/styles/app.scss build/styles/app.css",
+    "dev": "npm run build && xdg-open landing.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NewSoftwareCulture/NewSoftwareCulture.github.io.git"
+  },
+  "author": "DNSV",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NewSoftwareCulture/NewSoftwareCulture.github.io/issues"
+  },
+  "homepage": "https://github.com/NewSoftwareCulture/NewSoftwareCulture.github.io#readme",
+  "dependencies": {
+    "mixin": "^0.2.0"
+  }
+}
