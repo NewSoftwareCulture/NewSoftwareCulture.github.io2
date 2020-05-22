@@ -10,23 +10,23 @@
     <script type="text/javascript" src="jscroller.js"></script>
 </head>
 <body>
-    <header id='header'>
+    <div id='starting'>
         <div style="display: flex;">
             <a class="button" id="title" href="https://newsoftwareculture.github.io/">NOTES x DNSV</a>
-            <div class='menu' onclick="myFunction()"> =
-                <span class="menu-window" id="myMenu">
+            <div class='menu' onclick="menu_action()"> = 
+                <span class="menu-window" id="Menu">
                     <h1 id='menu-text'>Menu</h1>
                     <div class="menu-container">
-                        <a class='menu-content-text' href="http://youtube.com" style="color: rgb(190, 20, 91);">Music</a>
-                        <a class='menu-content-text' href="http://youtube.com" style="color: rgb(27, 127, 204);">Video</a>
-                        <a class='menu-content-text' href="https://habr.com/ru/company/true_engineering/blog/416123/" style="color: #9a20be;">Develop</a>
+                        <a class='menu-content-text button' href="http://youtube.com/" style="color: rgb(190, 20, 91);">Music</a>
+                        <a class='menu-content-text button' href="http://youtube.com/" style="color: rgb(27, 127, 204);">Video</a>
+                        <a class='menu-content-text button' href="https://habr.com/ru/company/true_engineering/blog/416123/" style="color: #9a20be;">Develop</a>
                     </div>
                 </span>
             </div>
         </div>
-        <h2><div class='run-text'>Notes x DNSV x Notes x DNSV x Notes x DNSV x Notes x DNSV x Notes x DNSV x Notes x DNSV x Notes x DNSV x Notes x DNSV</div></h2>
-        <div id="header__container">
-            <img id='header__img' src="src/media/gifs/beer.gif" alt="Здесь могла быть ваша реклама (с) YOTA" style="color: white">
+        <h2 id='head__text'>Notes x DNSV x Notes x DNSV x Notes x DNSV x Notes x DNSV x Notes x DNSV x Notes x DNSV x Notes x DNSV x Notes x DNSV</h2>
+        <header id="header">
+        <!--<img id='header__img' src="src/media/gifs/beer.gif" alt="Здесь могла быть ваша реклама (с) YOTA" style="color: white">
             <h2 id='header__text'>
                 — Короче, просыпаюсь я дома в срань. А просыпаюсь я от блядского звонка, в который трезвонят обеспокоенные дамочки. 
                 Ну и мне стало интересно, чем же они обеспокоены. Прежде чем задать вполне резонный вопрос: “Чо?” , что с китайского 
@@ -35,11 +35,11 @@
                 А оно дамочкам пришлось вполне по вкусу. Они давай с ним сразу сюсюкаться, я им: “Дамочки, Тестостерона на базу!”. А мне в лицо три ствола. 
                 Так они и свалили вместе с ним, бросив мне что-то насчет токсичного ублюдка и то, что Тестостерон мне нахуй не упал. И в этот момент я понял, 
                 что свои посты надо где-то складировать...
-            </h2>
-        </div>
-    </header>
+            </h2>-->
+        </header> 
+    </div>
 
-    <section class="content">
+    <!-- <section class="content">
         <img class="content__image" src="src/media/img/anacondaz.jpg" alt="Склею цыпу, сяду на мотоципл. И уеду в закат под Highway to hell...">
         <div class='content__block' style="background-color: rgb(131, 0, 55);">
             <h1 class='content__title'>Музыка</h1>
@@ -48,8 +48,8 @@
             <h3 class='content__text'>*отборный медиа-контент для вызова мурашек</h3>
             <a class='content__button button' style="background-color: rgb(112, 1, 47);" target="_blank" href="http://youtube.com">view</a>
         </div>
-    </section>
-    <section class="content">
+    </section> -->
+    <!-- <section class="content">
         <img class="content__image" src="src/media/gifs/hackerman.gif" alt="7 раз спроектируй, 1 раз сядь писать код.">
         <div class='content__block' style="background-color: #673776;">
             <h1 class='content__title'>Develop</h1>
@@ -58,8 +58,8 @@
             <h3 class='content__text'>Frontend, backend, server, desktop and mobile.</h3>
             <a class='content__button button' style="background-color: #4418528a" target="_blank" href="https://habr.com/ru/company/true_engineering/blog/416123/">view</a>
         </div>
-    </section>
-    <section class="content">
+    </section> -->
+    <!-- <section class="content">
         <img class="content__image" src="src/media/img/kuji.jpg" alt="Жизнь - это куча хуйни, которая просто случается. А картинка не открылась и это тоже случается :)">
         <div class='content__block' style="background-color: #115F9A;">
             <h1 class='content__title'>Видео</h1>
@@ -67,16 +67,22 @@
             <h3 class='content__text'>Интервью, подкасты и многое другое.</h3>
             <a class='content__button button' style="background-color: rgb(8, 59, 97);" target="_blank" href="http://youtube.com">view</a>
         </div> 
-    </section>
+    </section> -->
 
     <footer class='footer'>
         <h4 class='footer__author'>DNSV 2020</h4>
         <h4 style="width: calc(90vw - 260px);"></h4>
-        <a href= "https://vk.com/vlados.denisov" target="_blank"><img src="src/media/icons/vk.png" alt="VK" class='icon'></a>
-        <a href= "https://www.instagram.com/vladan4ik10/" target="_blank"><img src="src/media/icons/inst.png" alt="Inst" class='icon'></a>
-        <a href= "https://github.com/NewSoftwareCulture" target="_blank"><img src="src/media/icons/github.png" alt="GitHub" class='icon'></a>
+        <a href= "https://vk.com/vlados.denisov" target="_blank"><img class='button icon' src="src/media/icons/vk.png" alt="VK"></a>
+        <a href= "https://www.instagram.com/vladan4ik10/" target="_blank"><img class='button icon' src="src/media/icons/inst.png" alt="Inst"></a>
+        <a href= "https://github.com/NewSoftwareCulture" target="_blank"><img class='button icon' src="src/media/icons/github.png" alt="GitHub"></a>
     </footer> 
     
+
+    
+
+
+
+
     <script src='scripts/app.js'></script>
 </body>
 </html>

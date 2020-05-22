@@ -2,21 +2,5 @@
     padding-top: 30px;
     display: flex;
     height: 80px;
-    background-color: $bgclr;
-
-    &__author {
-        padding-top: 10px;
-        height: 20px;
-        width: 120px;
-        margin-left: 6vw;
-        color: $footer_color;
-        font-weight: 900;
-        font-size: 24px;
-    }
+    background-color: $bg_color;
 }
-.icon {
-    height: 40px;
-    width: 40px;
-    margin-left: 5px;
-    color: $footer_color;
-} 

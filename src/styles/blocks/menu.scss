@@ -1,28 +1,23 @@
 .menu {
-    box-sizing: border-box;
-    left: 95%;
+    display: inline-block;
     position: fixed;
-
-    color: white;
+    left: 95%;
     width: 50px;
     font-size: 50px;
     font-weight: 900;
-    display: inline-block;
+    color: white;
     cursor: pointer;
 }
 .menu .menu-window {
-    box-sizing: border-box;
     visibility: hidden;
-    width: 99vw;
-    height: 120vh;
-    background-color: $bgclr;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 8px 0;
     position: fixed;
-    left: 0vw;
+    width: calc(100vw-5px);
+    height: 120vh;
+    right: 0vw;
+    padding: 8px 0;
     margin-top: -5vh;
+    text-align: center;
+    background-color: $bg_color;
 }
 .menu .show {
     visibility: visible;
@@ -39,40 +34,13 @@
     to {opacity: 1;}
 }
 
-
-
 .menu-container {
-    max-width: 1900px;
     margin: auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     margin-top: 30vh;
-}
-#menu-text {
-    margin: 5vh auto 5vh auto;
-    width: 160px;
-    text-transform: uppercase;
-    font-size: 40px;
-    font-weight: 300;
-    border: white 2px solid;
-}
-.menu-content-text {
-    max-width: 600px;
-    margin: auto 2vw auto 0;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 10vh;
-    font-weight: 300;
-}
-.menu-content-text:hover {
-    opacity: 0.5;
-}
 
-@media screen and (max-width: 1200px) {
-    .menu-content-text {
-        margin: 5vh auto 0 auto;
-    }
-    .menu-container {
+    @include media('<=md') {
         grid-template-columns: 100vw;
         margin-bottom: 5vh;
         margin-top: 10vh;

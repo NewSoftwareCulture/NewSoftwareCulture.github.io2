@@ -1,4 +1,4 @@
-function myFunction() {
-    var popup = document.getElementById("myMenu");
+function menu_action() {
+    var popup = document.getElementById("Menu");
     popup.classList.toggle("show");
 }

@@ -16,8 +16,5 @@
   "bugs": {
     "url": "https://github.com/NewSoftwareCulture/NewSoftwareCulture.github.io/issues"
   },
-  "homepage": "https://github.com/NewSoftwareCulture/NewSoftwareCulture.github.io#readme",
-  "dependencies": {
-    "mixin": "^0.2.0"
-  }
+  "homepage": "https://github.com/NewSoftwareCulture/NewSoftwareCulture.github.io#readme"
 }
