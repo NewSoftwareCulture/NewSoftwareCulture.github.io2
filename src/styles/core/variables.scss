@@ -3,10 +3,24 @@ $bg_color: #181818;
 $footer_color: rgb(131, 130, 130);
 $main_txt_color: rgba(255, 255, 255, 0.5);
 
+$music_c: rgb(131, 0, 55);
+$dev_c: #673776;
+$video_c: #115F9A;
+
+$music_b_c: rgb(112, 1, 47);
+$dev_b_c: #4418528a;
+$video_b_c: rgb(8, 59, 97);;
+
+// Constants
+$max_w: 1920px;
+$min_w: 300px;
+
 // Breakpoints
 $breakpoints: (
 	'xs': 568px,
 	'sm': 768px,
 	'md': 1024px,
-	'lg': 1152px
+	'lg': 1152px,
+	'tf': 1400px,
+	'max': 1920px
 );

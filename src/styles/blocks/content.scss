@@ -1,60 +1,43 @@
 .content {
-    max-width: 1900px;
-    margin: 0 auto 0 auto;
     display: grid;
-    grid-template-columns: 3fr 2fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 3fr;
+    height: 100vh;
 
-    @include media('<md'){
+    @media screen and (min-device-aspect-ratio: 1/2) {
         grid-template-columns: 1fr;
+        grid-template-rows: 2fr 1fr;
+    }
+    @media screen and (min-device-aspect-ratio: 5/4) {
+        grid-template-columns: 7fr 3fr;
+        grid-template-rows: 1fr;
+    }
+    @media screen and (min-device-aspect-ratio: 3/1) {
+        grid-template-columns: 3fr 2fr;
+        grid-template-rows: 1fr;
     }
 
     &__image {
-        max-width: 1500px;
-        width: 60vw;
-        height: 100vh;
+        width: 100%;
+        height: 100%;
+    }
+    
+    &__action {
+        margin: 15vh 0 0 0;
 
-        @include media('<md') {
-            width: 100vw;
-            height: 60vw;
+        @media screen and (min-device-aspect-ratio: 1/2) {
+            margin: 5vh 0 0 0;
+        }
+        @media screen and (min-device-aspect-ratio: 5/4) {
+            margin: calc(50vh - 90px) 0 0 0;
         }
     }
-    &__block {
-        max-width: 1500px;
-        width: calc(40vw-5px);
 
-        @include media('<md') {
-            width: 100vw;
-        }
-    }
-    &__title {
-        margin-top: 35vh;
-        text-align: center;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        font-size: 10vh;
-        font-weight: 700;
-        color: white;
-
-        @include media('<md') {
-            margin-top: 0vh;
-            font-size: 10vw;
-        }
-    }
     &__line {
         margin-bottom: 3vh;
         margin-top: 1vh;
         text-align: center;
         color: white;
-    }
-    &__text {
-        text-align: center;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        margin-bottom: 1vh;
-        font-size: 2vh;
-        color: white;
-
-        @include media('<md') {
-            font-size: 18px;
-        }
     }
     &__button {
         display: block;
@@ -68,5 +51,24 @@
         font-weight: 500;
         color: white;
         border: white 2px solid;
+    }
+
+    &__block__music {
+        background-color: $music_c;
+    }
+    &__block__video {
+        background-color: $video_c;
+    }
+    &__block__dev {
+        background-color: $dev_c;
+    }
+    &__music {
+        background-color: $music_b_c;
+    }
+    &__video {
+        background-color: $video_b_c;
+    }
+    &__dev {
+        background-color: $dev_b_c;
     }
 }

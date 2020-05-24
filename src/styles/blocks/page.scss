@@ -10,3 +10,9 @@ a {
 body { 
     background-color: $bg_color;
 }
+
+#page {
+    max-width: $max_w;
+    min-width: $min_w;
+    margin: 0 auto 0 auto;
+}

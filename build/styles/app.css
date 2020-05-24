@@ -1,7 +1,7 @@
 #head__text {
   color: transparent;
   -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
-  width: 80vw;
+  width: 100%;
   height: 50px;
   margin: 7vh auto auto auto;
   text-transform: uppercase;
@@ -10,16 +10,6 @@
   font-size: 50px;
   font-weight: 700;
   overflow: hidden;
-}
-
-.footer__author {
-  padding-top: 10px;
-  height: 20px;
-  width: 120px;
-  margin-left: 6vw;
-  color: #838282;
-  font-weight: 900;
-  font-size: 24px;
 }
 
 #menu-text {
@@ -36,7 +26,6 @@
 .menu-content-text {
   color: transparent;
   -webkit-text-stroke: 2px #181818;
-  width: 33vw;
   height: 50px;
   margin: 7vh auto auto auto;
   text-transform: uppercase;
@@ -53,6 +42,31 @@
   }
 }
 
+.content__title {
+  color: white;
+  font-size: 50px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.content__text {
+  color: white;
+  text-align: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.footer__author {
+  padding-top: 10px;
+  height: 20px;
+  width: 120px;
+  margin-left: 6vw;
+  color: #838282;
+  font-weight: 900;
+  font-size: 24px;
+}
+
 body, h1, h2, h3, h4, p, a, div {
   margin: 0;
   padding: 0;
@@ -66,6 +80,12 @@ a {
 
 body {
   background-color: #181818;
+}
+
+#page {
+  max-width: 1920px;
+  min-width: 300px;
+  margin: 0 auto 0 auto;
 }
 
 #starting {
@@ -150,20 +170,26 @@ body {
 }
 
 .menu {
-  display: inline-block;
-  position: fixed;
-  left: 95%;
-  width: 50px;
-  font-size: 50px;
-  font-weight: 900;
   color: white;
+  font-weight: 900;
+  font-size: 50px;
+  width: 50px;
+  right: 50px;
+  left: auto;
+  position: fixed;
+  display: inline-block;
   cursor: pointer;
+}
+@media (min-width: 1921px) {
+  .menu {
+    right: calc(50% - 900px);
+  }
 }
 
 .menu .menu-window {
   visibility: hidden;
   position: fixed;
-  width: calc(100vw-5px);
+  width: 100%;
   height: 120vh;
   right: 0vw;
   padding: 8px 0;
@@ -198,60 +224,56 @@ body {
   margin: auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  padding: 0 20vw 0 20vw;
   margin-top: 30vh;
 }
 @media (max-width: 1024px) {
   .menu-container {
     grid-template-columns: 100vw;
-    margin-bottom: 5vh;
-    margin-top: 10vh;
+    margin-top: calc(40vh - 200px);
     padding-left: 0;
   }
 }
 
 .content {
-  max-width: 1900px;
-  margin: 0 auto 0 auto;
   display: grid;
-  grid-template-columns: 3fr 2fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: 2fr 3fr;
+  height: 100vh;
 }
-@media (max-width: 1023px) {
+@media screen and (min-device-aspect-ratio: 1/2) {
   .content {
     grid-template-columns: 1fr;
+    grid-template-rows: 2fr 1fr;
+  }
+}
+@media screen and (min-device-aspect-ratio: 5/4) {
+  .content {
+    grid-template-columns: 7fr 3fr;
+    grid-template-rows: 1fr;
+  }
+}
+@media screen and (min-device-aspect-ratio: 3/1) {
+  .content {
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: 1fr;
   }
 }
 .content__image {
-  max-width: 1500px;
-  width: 60vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
 }
-@media (max-width: 1023px) {
-  .content__image {
-    width: 100vw;
-    height: 60vw;
+.content__action {
+  margin: 15vh 0 0 0;
+}
+@media screen and (min-device-aspect-ratio: 1/2) {
+  .content__action {
+    margin: 5vh 0 0 0;
   }
 }
-.content__block {
-  max-width: 1500px;
-  width: calc(40vw-5px);
-}
-@media (max-width: 1023px) {
-  .content__block {
-    width: 100vw;
-  }
-}
-.content__title {
-  margin-top: 35vh;
-  text-align: center;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-size: 10vh;
-  font-weight: 700;
-  color: white;
-}
-@media (max-width: 1023px) {
-  .content__title {
-    margin-top: 0vh;
-    font-size: 10vw;
+@media screen and (min-device-aspect-ratio: 5/4) {
+  .content__action {
+    margin: calc(50vh - 90px) 0 0 0;
   }
 }
 .content__line {
@@ -259,18 +281,6 @@ body {
   margin-top: 1vh;
   text-align: center;
   color: white;
-}
-.content__text {
-  text-align: center;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  margin-bottom: 1vh;
-  font-size: 2vh;
-  color: white;
-}
-@media (max-width: 1023px) {
-  .content__text {
-    font-size: 18px;
-  }
 }
 .content__button {
   display: block;
@@ -284,6 +294,24 @@ body {
   font-weight: 500;
   color: white;
   border: white 2px solid;
+}
+.content__block__music {
+  background-color: #830037;
+}
+.content__block__video {
+  background-color: #115F9A;
+}
+.content__block__dev {
+  background-color: #673776;
+}
+.content__music {
+  background-color: #70012f;
+}
+.content__video {
+  background-color: #083b61;
+}
+.content__dev {
+  background-color: #4418528a;
 }
 
 .footer {
