@@ -42,6 +42,71 @@
   }
 }
 
+#header__text {
+  font-style: italic;
+  margin: auto;
+  padding: 0 50px 0 50px;
+  text-align: justify;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 20px;
+}
+@media screen and (min-device-aspect-ratio: 5/4) {
+  #header__text {
+    padding: 0 5% 0 5%;
+    font-size: 35px;
+  }
+}
+@media screen and (min-device-aspect-ratio: 3/2) {
+  #header__text {
+    padding: 0 15% 0 15%;
+    font-size: 20px;
+  }
+}
+
+.avatar {
+  text-align: left;
+  color: rgba(255, 255, 255, 0.4);
+}
+.avatar__name {
+  font-weight: bolder;
+  font-size: 30px;
+}
+@media (max-width: 568px) {
+  .avatar__name {
+    font-size: 20px;
+  }
+}
+@media screen and (min-device-aspect-ratio: 5/4) {
+  .avatar__name {
+    font-size: 40px;
+  }
+}
+@media screen and (min-device-aspect-ratio: 3/2) {
+  .avatar__name {
+    font-size: 25px;
+  }
+}
+.avatar__status {
+  font-style: italic;
+  text-align: left;
+  font-size: 20px;
+}
+@media (max-width: 568px) {
+  .avatar__status {
+    font-size: 15px;
+  }
+}
+@media screen and (min-device-aspect-ratio: 5/4) {
+  .avatar__status {
+    font-size: 30px;
+  }
+}
+@media screen and (min-device-aspect-ratio: 3/2) {
+  .avatar__status {
+    font-size: 20px;
+  }
+}
+
 .content__title {
   color: white;
   font-size: 50px;
@@ -116,56 +181,48 @@ body {
 
 #header {
   display: grid;
-  grid-template-columns: 3fr 2fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 2fr;
+  box-sizing: border-box;
+  height: calc(100vh - 130px);
 }
-@media (max-width: 767px) {
-  #header {
-    margin-top: 5vh auto 2vw auto;
-    grid-template-columns: 100vw;
-  }
-}
-@media (max-width: 1023px) {
+@media screen and (min-device-aspect-ratio: 1/2) {
   #header {
     grid-template-columns: 1fr;
+    grid-template-rows: 3fr 2fr;
+  }
+}
+@media screen and (min-device-aspect-ratio: 5/4) {
+  #header {
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: 1fr;
+  }
+}
+@media screen and (min-device-aspect-ratio: 3/1) {
+  #header {
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: 1fr;
   }
 }
 #header__img {
-  max-width: 1500px;
-  width: 50vw;
-  margin: 5vw auto auto 5vw;
+  width: 90%;
+  margin: auto;
+  padding: 0 5% 0 5%;
+  color: white;
 }
-@media (max-width: 767px) {
+@media screen and (min-device-aspect-ratio: 3/4) {
   #header__img {
-    width: 80vw;
-    height: 50vw;
-    margin: 2vw auto 0 auto;
+    width: 60%;
   }
 }
-@media (max-width: 1023px) {
+@media screen and (min-device-aspect-ratio: 5/4) {
   #header__img {
-    width: 90vw;
+    width: 90%;
   }
 }
-@media (max-width: 1151px) {
+@media screen and (min-device-aspect-ratio: 3/2) {
   #header__img {
-    margin-top: 8vw;
-  }
-}
-#header__text {
-  max-width: 1500px;
-  margin: 5vw 2vw 0 0;
-  font-size: 2.7vh;
-  color: rgba(255, 255, 255, 0.4);
-}
-@media (max-width: 767px) {
-  #header__text {
-    margin: 2vh 7vw 0 7vw;
-    font-size: min(4vw, 5vh);
-  }
-}
-@media (max-width: 1151px) {
-  #header__text {
-    font-size: 2.4vh;
+    width: 75%;
   }
 }
 
@@ -179,6 +236,11 @@ body {
   position: fixed;
   display: inline-block;
   cursor: pointer;
+}
+@media (max-width: 1024px) {
+  .menu {
+    right: 0;
+  }
 }
 @media (min-width: 1921px) {
   .menu {
@@ -323,6 +385,49 @@ body {
 
 .button:hover {
   opacity: 0.5;
+}
+
+.avatar {
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  margin-top: 50px;
+  margin-left: calc(100% - 500px);
+  width: 500px;
+}
+@media screen and (min-device-aspect-ratio: 3/2) {
+  .avatar {
+    margin-left: 30px;
+  }
+}
+@media (max-width: 568px) {
+  .avatar {
+    display: none;
+  }
+}
+.avatar__img {
+  box-sizing: border-box;
+  border: 5px solid rgba(255, 255, 255, 0.7);
+  border-radius: 60px;
+  width: 60px;
+  height: 60px;
+  margin: auto;
+}
+@media screen and (min-device-aspect-ratio: 5/4) {
+  .avatar__img {
+    border-radius: 80px;
+    width: 80px;
+    height: 80px;
+  }
+}
+@media screen and (min-device-aspect-ratio: 3/2) {
+  .avatar__img {
+    border-radius: 60px;
+    width: 60px;
+    height: 60px;
+  }
+}
+.avatar__body {
+  margin-left: 20px;
 }
 
 .icon {
