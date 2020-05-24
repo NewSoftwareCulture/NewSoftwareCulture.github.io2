@@ -8,7 +8,9 @@
     position: fixed;
     display: inline-block;
     cursor: pointer;
-
+    @include media('<=md') {
+        right: 0;
+    }
     @include media('>max') { 
         right: calc(50% - 900px);
     }
